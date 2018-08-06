@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>货物进销管理系统</title>
+    <link rel="stylesheet" th:href="@{/css/amazeui.min.css}"/>
+    <link rel="stylesheet" th:href="@{/css/admin.css}">
+</head>
+<body>
+<header class="am-topbar am-topbar-inverse admin-header">
+    <div class="am-topbar-brand">
+        <strong>首页</strong>
+        <small>货物进销管理系统</small>
+    </div>
+</header>
+<div class="am-cf admin-main">
+    <!--左侧导航栏-->
+    <div th:replace="header::left"></div>
+    <!--右侧正文-->
+    <div class="admin-content"></div>
+</div>
+</body>
+</html>
