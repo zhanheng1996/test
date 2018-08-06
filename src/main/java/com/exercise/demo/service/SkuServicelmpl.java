@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service(value = "skuService")
-public class SkuServicempl implements SkuService{
+public class SkuServicelmpl implements SkuService{
     @Autowired
     private SkuDao skuDao;
     @Override

@@ -1,15 +1,18 @@
 drop database if exists exercise;
 create database exercise;
 use exercise;
+
 CREATE TABLE `repertory` (
   `rid` int(6) PRIMARY KEY auto_increment,
   `rname` varchar(50) NOT NULL,
   `raddress` varchar(50) NOT NULL
 )DEFAULT CHARSET=utf8 AUTO_INCREMENT=1;
+
 CREATE TABLE `goods` (
   `gid` int(6) PRIMARY KEY auto_increment,
   `gname` varchar(50) NOT NULL
 )DEFAULT CHARSET=utf8 AUTO_INCREMENT=1;
+
 CREATE TABLE relation(
   relationid int(6) PRIMARY  KEY auto_increment,
   gid int(6),
@@ -17,6 +20,7 @@ CREATE TABLE relation(
   FOREIGN KEY (gid) REFERENCES goods(gid),
   FOREIGN KEY (rid) REFERENCES repertory(rid)
 )DEFAULT CHARSET=utf8 AUTO_INCREMENT=1;
+
 CREATE TABLE sku(
   sid int(6) PRIMARY  KEY auto_increment,
   gid int(6),
@@ -26,6 +30,13 @@ CREATE TABLE sku(
   FOREIGN KEY(gid) REFERENCES goods(gid)
 )DEFAULT CHARSET=utf8 AUTO_INCREMENT=1;
 
+CREATE TABLE user(
+  userid int(6) PRIMARY  KEY auto_increment,
+  username VARCHAR(50) NOT NULL,
+  password VARCHAR(50) NOT NULL
+)DEFAULT CHARSET=utf8 AUTO_INCREMENT=1;
+
+insert into user values (1,'zhanheng1996','123456');
 insert into repertory values (1,'tmall','Beijing');
 insert into repertory values (2,'taobao','Shanghai');
 insert into repertory values (3,'jingdong','Guangzhou');

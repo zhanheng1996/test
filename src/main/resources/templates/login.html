@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>登录账号</title>
+</head>
+<body>
+<form action="#" th:action="@{/user/loginCheck}" th:method="POST">
+    <table>
+        <tr>
+            <td>用户名：</td>
+            <td>
+                <input th:type="text" th:name="username">
+            </td>
+        </tr>
+        <tr>
+            <td>密码：</td>
+            <td>
+                <input th:type="password" th:name="password">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input th:type="submit" th:value="登录">
+            </td>
+            <td>
+                <a href="/user/register">
+                    <input th:type="button" th:value="注册">
+                </a>
+            </td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>
